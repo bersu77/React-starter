@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@custom-variant hover (&:hover);
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-primary: #FEB413;
+    --color-para: #8C929C;
+    --breakpoint-xs: 390px;
+    --breakpoint-sm: 414px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1224px;
+    --breakpoint-2xl: 1224px;
+    --font-manrope: "Manrope", sans-serif;
+    --font-jura: "Jura", sans-serif;
+    --font-golos: "Golos Text", sans-serif;
+    --font-geist: "Geist Mono", monospace;
+    --font-AeonikFono: "Aeonik Fono", roboto;
+}
+
+
+@layer base {
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 text-sm lg:text-base leading-normal px-4 min-h-10 md:min-h-12 font-manrope font-semibold bg-primary text-black;
+    }
+}

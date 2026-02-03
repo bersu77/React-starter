@@ -1,0 +1,1 @@
+export const mb_16 = 'mb-6 md:mb-8 lg:mb-12 xl:mb-16'

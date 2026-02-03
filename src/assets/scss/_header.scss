@@ -1,0 +1,67 @@
+@keyframes headerAnimation {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.heading {
+    padding: var(--navbar-padding-y) 0;
+    --navbar-padding-y: 20px;
+
+    @include md {
+        --navbar-padding-y: 16px;
+    }
+
+    @include sm {
+        --navbar-padding-y: 12px;
+    }
+
+    &.fixed {
+        position: fixed;
+        animation: headerAnimation .5s linear;
+        background-color: rgba($color: $bg, $alpha: .40);
+        backdrop-filter: blur(10px);
+        --navbar-padding-y: 16px;
+
+        @include md {
+            --navbar-padding-y: 14px;
+        }
+    }
+
+    &-menu {
+        @include mmd {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba($color: $black, $alpha: .90);
+            padding: 24px;
+            z-index: 9;
+            transform: translateY(150%);
+            @include transition;
+
+            &.show-menu {
+                transform: translate(0, 0);
+            }
+        }
+
+        @include sm {
+            padding: 16px;
+        }
+    }
+
+    &-toggler {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
