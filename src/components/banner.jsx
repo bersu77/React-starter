@@ -8,13 +8,10 @@ import { motion } from 'framer-motion'
 import { duration, once, y } from '../utilities/animation'
 import PWAInstallModal from './PWAInstallModal'
 
-const AUTH_URL = 'https://www.pryzen.io/auth'
-
 export default function Banner() {
   const [showPWAInfo, setShowPWAInfo] = useState(false)
 
   const handleDownload = () => {
-    window.open(AUTH_URL, '_blank', 'noopener,noreferrer')
     setShowPWAInfo(true)
   }
 

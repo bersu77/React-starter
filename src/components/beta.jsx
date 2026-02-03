@@ -8,13 +8,10 @@ import Button from './button'
 import { useState } from 'react'
 import PWAInstallModal from './PWAInstallModal'
 
-const AUTH_URL = 'https://www.pryzen.io/auth'
-
 export default function Beta() {
     const [showPWAInfo, setShowPWAInfo] = useState(false)
 
     const handleDownload = () => {
-        window.open(AUTH_URL, '_blank', 'noopener,noreferrer')
         setShowPWAInfo(true)
     }
 
